@@ -1,0 +1,182 @@
+[
+ {
+  "answerer": "deepseek-v3",
+  "panel": [
+   "gpt-4o",
+   "llama-3.1-70b",
+   "gpt-4o-mini"
+  ],
+  "accuracy": 0.7868600307624698,
+  "wrong": 970,
+  "auroc": 0.7915332064705763,
+  "ece": 0.05422822652287598,
+  "arbiter": {
+   "flagged": 0.12392880685563612,
+   "precision": 0.5585106382978723,
+   "recall": 0.3247422680412371
+  },
+  "majority": {
+   "flagged": 0.15117556580971214,
+   "precision": 0.4331395348837209,
+   "recall": 0.30721649484536084
+  },
+  "best_critic": {
+   "flagged": 0.14238628872775214,
+   "precision": 0.5154320987654321,
+   "recall": 0.3443298969072165
+  },
+  "split_panel": 0.22654361678751922,
+  "accuracy_when_split": 0.6401551891367604,
+  "accuracy_when_all_pass": 0.8594327990135635
+ },
+ {
+  "answerer": "gemini-1.5-flash",
+  "panel": [
+   "deepseek-v3",
+   "gpt-4o",
+   "llama-3.1-70b"
+  ],
+  "accuracy": 0.6262359920896506,
+  "wrong": 1701,
+  "auroc": 0.8903811999133636,
+  "ece": 0.055445579145401436,
+  "arbiter": {
+   "flagged": 0.3137771918259723,
+   "precision": 0.8011204481792717,
+   "recall": 0.6725455614344503
+  },
+  "majority": {
+   "flagged": 0.3082838936497473,
+   "precision": 0.7997148966500356,
+   "recall": 0.6596119929453262
+  },
+  "best_critic": {
+   "flagged": 0.3069655020874533,
+   "precision": 0.8017179670722978,
+   "recall": 0.6584362139917695
+  },
+  "split_panel": 0.1916062403867282,
+  "accuracy_when_split": 0.5573394495412844,
+  "accuracy_when_all_pass": 0.8567619047619047
+ },
+ {
+  "answerer": "gpt-4o",
+  "panel": [
+   "deepseek-v3",
+   "llama-3.1-70b",
+   "gpt-4o-mini"
+  ],
+  "accuracy": 0.7747747747747747,
+  "wrong": 1025,
+  "auroc": 0.8098644217865888,
+  "ece": 0.043979753050671054,
+  "arbiter": {
+   "flagged": 0.11667765326301911,
+   "precision": 0.6026365348399246,
+   "recall": 0.3121951219512195
+  },
+  "majority": {
+   "flagged": 0.15007690617446715,
+   "precision": 0.5124450951683748,
+   "recall": 0.34146341463414637
+  },
+  "best_critic": {
+   "flagged": 0.14238628872775214,
+   "precision": 0.6003086419753086,
+   "recall": 0.3795121951219512
+  },
+  "split_panel": 0.22588442100637224,
+  "accuracy_when_split": 0.6215953307392996,
+  "accuracy_when_all_pass": 0.8594327990135635
+ },
+ {
+  "answerer": "gpt-4o-mini",
+  "panel": [
+   "deepseek-v3",
+   "gpt-4o",
+   "llama-3.1-70b"
+  ],
+  "accuracy": 0.7088551966600747,
+  "wrong": 1325,
+  "auroc": 0.8664416474634163,
+  "ece": 0.049682558179863515,
+  "arbiter": {
+   "flagged": 0.21621621621621623,
+   "precision": 0.7591463414634146,
+   "recall": 0.5637735849056604
+  },
+  "majority": {
+   "flagged": 0.16172269830806416,
+   "precision": 0.7961956521739131,
+   "recall": 0.4422641509433962
+  },
+  "best_critic": {
+   "flagged": 0.18501428257525818,
+   "precision": 0.7589073634204275,
+   "recall": 0.48226415094339625
+  },
+  "split_panel": 0.2074269391342562,
+  "accuracy_when_split": 0.4311440677966102,
+  "accuracy_when_all_pass": 0.8581997533908755
+ },
+ {
+  "answerer": "llama-3.1-70b",
+  "panel": [
+   "deepseek-v3",
+   "gpt-4o",
+   "gpt-4o-mini"
+  ],
+  "accuracy": 0.7400571303010327,
+  "wrong": 1183,
+  "auroc": 0.848755780123403,
+  "ece": 0.060409011364701476,
+  "arbiter": {
+   "flagged": 0.2188529993408042,
+   "precision": 0.6736947791164659,
+   "recall": 0.5672020287404903
+  },
+  "majority": {
+   "flagged": 0.16435948143265217,
+   "precision": 0.6818181818181818,
+   "recall": 0.43110735418427726
+  },
+  "best_critic": {
+   "flagged": 0.17161063502526916,
+   "precision": 0.6978233034571063,
+   "recall": 0.4606931530008453
+  },
+  "split_panel": 0.2039112283014722,
+  "accuracy_when_split": 0.5355603448275862,
+  "accuracy_when_all_pass": 0.8594327990135635
+ },
+ {
+  "answerer": "llama-3.1-8b",
+  "panel": [
+   "deepseek-v3",
+   "gpt-4o",
+   "llama-3.1-70b"
+  ],
+  "accuracy": 0.4919797846627115,
+  "wrong": 2312,
+  "auroc": 0.9575554691834436,
+  "ece": 0.08281283035302597,
+  "arbiter": {
+   "flagged": 0.46231597451109646,
+   "precision": 0.9296577946768061,
+   "recall": 0.8460207612456747
+  },
+  "majority": {
+   "flagged": 0.45726214018896943,
+   "precision": 0.9336857280153772,
+   "recall": 0.8403979238754326
+  },
+  "best_critic": {
+   "flagged": 0.46275543836519445,
+   "precision": 0.9320987654320988,
+   "recall": 0.8490484429065744
+  },
+  "split_panel": 0.12326961107448912,
+  "accuracy_when_split": 0.47058823529411764,
+  "accuracy_when_all_pass": 0.8922934076137419
+ }
+]
