@@ -47,7 +47,8 @@ def items(table, keys, answerer):
              "answer": table[k]["models"][answerer]["answer"]} for k in keys]
 
 
-def run(folds=5, seed=0):
+def run(folds=5, seed=0, detail=False):
+    """One row per answering model; with `detail`, also each question's out-of-fold P(right), label and critic verdicts."""
     table = data.table()
     keys = sorted(table)
     fold = np.random.default_rng(seed).permutation(len(keys)) % folds
@@ -72,6 +73,8 @@ def run(folds=5, seed=0):
                "majority": flags(disagree.sum(1) >= 2, wrong), "best_critic": flags(disagree[:, 0], wrong),
                "split_panel": float(split.mean()), "accuracy_when_split": float(right[split].mean()),
                "accuracy_when_all_pass": float(right[~disagree.any(1)].mean())}
+        if detail:
+            row["detail"] = {"p": p.tolist(), "right": right.tolist(), "disagree": disagree.tolist()}
         out.append(row)
     return out
 

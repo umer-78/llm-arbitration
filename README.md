@@ -1,5 +1,7 @@
 # llm-arbitration
 
+**Live demo:** https://umer-78.github.io/llm-arbitration/ (set the review threshold and see what the critics' verdicts are worth)
+
 A second opinion on LLM answers. A panel of critics checks each answer in parallel, disagreements between them are flagged, and an adjudicator turns their critiques into one verdict. The verdict carries a calibrated probability that the answer is right, the issues it upholds, and the ones it dismissed and why. Every arbitration is written to an SQLite audit log.
 
 It was measured on real recorded answers: six models on HELM Lite's 4,551 questions (GSM8K, MATH, MMLU, MedQA, OpenBookQA, LegalBench).
@@ -34,6 +36,7 @@ Full tables are in `results/bench.md` and `results/summary.json`.
 - **Dispatch.** All critics run in parallel, each with retries. A critic that still fails is left out, and the verdict names it under `degraded`.
 - **Disagreement detection.** A disagreement is scores more than 2 apart, or problems found by only some of the critics.
 - **Adjudication.** From labelled history, the adjudicator learns how often each critic passes right answers and wrong answers on each task, plus the answering model's prior accuracy. Treating critics as independent given the truth (naive Bayes), it combines them into P(right).
+  - The independence is an approximation: the critics are models that fail on the same questions. Calibrated overall (ECE 0.044–0.083), it is overconfident when all three object: for DeepSeek-V3's answers it gives those 20% on average and 48% were right. The live demo shows the gap for every pattern of verdicts.
   - Issues from critics on the losing side are dismissed, with the reason.
   - An `escalate` hook, such as an LLM adjudicator, runs only when critics disagree.
 
@@ -55,6 +58,7 @@ verdict.p_correct, verdict.confirmed, verdict.dismissed, verdict.degraded
 pip install -e '.[dev]'
 python -m arbiter bench                            # about 30 s once the data is cached
 python -m arbiter explain gsm8k//id8660            # one arbitration, with every critique
+python -m arbiter.demo                              # rebuild the live demo's data in docs/
 ```
 
 HELM Lite's public results are downloaded on first use into `~/.cache/arbiter`; nothing is committed.
