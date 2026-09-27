@@ -1,5 +1,7 @@
 # llm-arbitration
 
+[![LLM Arbitration: the live demo](.github/preview.jpg)](https://umer-78.github.io/llm-arbitration/)
+
 **Live demo:** https://umer-78.github.io/llm-arbitration/ (set the review threshold and see what the critics' verdicts are worth)
 
 A second opinion on LLM answers. A panel of critics checks each answer in parallel, disagreements between them are flagged, and an adjudicator turns their critiques into one verdict. The verdict carries a calibrated probability that the answer is right, the issues it upholds, and the ones it dismissed and why. Every arbitration is written to an SQLite audit log.
