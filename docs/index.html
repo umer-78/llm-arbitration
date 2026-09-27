@@ -36,7 +36,7 @@
       <section class="card" id="threshold">
         <h2>Where to draw the line</h2>
         <p class="sub">The arbiter flags an answer for review when its probability of being right falls below the threshold. Lower the threshold and fewer answers are flagged, more of them truly wrong; raise it and more wrong answers are caught at the cost of more reviews. The dots are the simpler rules it replaces.</p>
-        <div class="controls"><label for="who">Answers from</label><select id="who"></select></div>
+        <div class="controls"><label for="who">Answers from</label><select id="who" data-fx-step></select></div>
         <div class="controls"><label for="t">Flag below</label><input id="t" type="range" min="1" max="39" step="1" value="20"><b id="tVal" class="mono"></b></div>
         <div class="readout" id="flagOut"></div>
         <div id="pr" style="margin-top:14px"></div>
