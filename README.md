@@ -1,5 +1,7 @@
 # llm-arbitration
 
+[![CI](https://github.com/umer-78/llm-arbitration/actions/workflows/ci.yml/badge.svg)](https://github.com/umer-78/llm-arbitration/actions/workflows/ci.yml)
+
 [![LLM Arbitration: the live demo](.github/preview.jpg)](https://umer-78.github.io/llm-arbitration/)
 
 **Live demo:** https://umer-78.github.io/llm-arbitration/ (set the review threshold and see what the critics' verdicts are worth)
@@ -64,3 +66,7 @@ python -m arbiter.demo                              # rebuild the live demo's da
 ```
 
 HELM Lite's public results are downloaded on first use into `~/.cache/arbiter`; nothing is committed.
+
+## Licence
+
+MIT licence (see [LICENSE](LICENSE)). The data it evaluates (HELM Lite's recorded answers) keeps its own licence and is downloaded when you run it.
