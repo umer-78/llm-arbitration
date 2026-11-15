@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" data-scene="panel">
+<html lang="en" data-scene="panel" data-look="dmserif" data-hero="band" data-card="solid" data-motif="lines" data-backdrop="stars">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LLM Arbitration · Umer Hashmi</title>
   <meta name="description" content="A panel of critic models reviews each answer and a statistical adjudicator turns their verdicts into one probability: measured on 4,551 HELM Lite questions.">
-  <meta name="theme-color" content="#1d4ed8">
+  <meta name="theme-color" content="#8860c1">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Umer Hashmi · projects">
   <meta property="og:title" content="LLM Arbitration · Umer Hashmi">
@@ -16,10 +16,15 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" id="fx-fonts">
   <link rel="stylesheet" href="kit.css">
   <link rel="stylesheet" href="fx.css">
   <style>:root { --accent: #1d4ed8; --fx-2: #14b8a6; --fx-3: #f59e0b; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #93c5fd; --on-accent: #0f0e0c; } }</style>
+<style id="fx-look">:root[data-look] { --font: 'DM Sans', system-ui, -apple-system, "Segoe UI", sans-serif; --fx-display: 'DM Serif Display', Georgia, serif; --mono: 'DM Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; --fx-display-weight: 400; --fx-tracking: -0.01em; --fx-title-case: none; --fx-radius: 8px; --fx-hero-radius: 18px; --fx-control-radius: 6px; --accent: #8860c1; --accent-hover: #774eae; --accent-soft: #f4efff; --accent-glow: rgb(136 96 193 / 0.16); --on-accent: #ffffff; --fx-2: #099b8a; --fx-3: #e371b3; --bg: #faf8ff; --bg-elevated: #fefdff; --surface: #fefeff; --surface-2: #f5f1fc; --surface-3: #ede9f4; --border: #e0dbe8; --border-strong: #c6c1cf; --line: #e0dbe8; }
+@media (prefers-color-scheme: dark) { :root[data-look]:not([data-theme="light"]) { --accent: #b18beb; --accent-hover: #c2a1f8; --accent-soft: rgb(177 139 235 / 0.14); --accent-glow: rgb(177 139 235 / 0.2); --on-accent: #140e1d; --fx-2: #23ccb6; --fx-3: #fe97d1; --bg: #110d18; --bg-elevated: #18141f; --surface: #1b1723; --surface-2: #231f2b; --surface-3: #2d2936; --border: #322e39; --border-strong: #44404c; --line: #322e39; } }
+:root[data-look][data-theme="dark"] { --accent: #b18beb; --accent-hover: #c2a1f8; --accent-soft: rgb(177 139 235 / 0.14); --accent-glow: rgb(177 139 235 / 0.2); --on-accent: #140e1d; --fx-2: #23ccb6; --fx-3: #fe97d1; --bg: #110d18; --bg-elevated: #18141f; --surface: #1b1723; --surface-2: #231f2b; --surface-3: #2d2936; --border: #322e39; --border-strong: #44404c; --line: #322e39; }</style>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js" data-fx>
+<link rel="modulepreload" href="fx3d.js" data-fx>
 </head>
 <body>
   <div class="wrap">
