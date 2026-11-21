@@ -25,6 +25,9 @@
 :root[data-look][data-theme="dark"] { --accent: #b18beb; --accent-hover: #c2a1f8; --accent-soft: rgb(177 139 235 / 0.14); --accent-glow: rgb(177 139 235 / 0.2); --on-accent: #140e1d; --fx-2: #23ccb6; --fx-3: #fe97d1; --bg: #110d18; --bg-elevated: #18141f; --surface: #1b1723; --surface-2: #231f2b; --surface-3: #2d2936; --border: #322e39; --border-strong: #44404c; --line: #322e39; }</style>
 <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.186.1/build/three.module.min.js" data-fx>
 <link rel="modulepreload" href="fx3d.js" data-fx>
+<link rel="canonical" href="https://umer-78.github.io/llm-arbitration/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%238860c1'/><text x='16' y='22' font-size='17' text-anchor='middle' fill='white' font-family='system-ui,sans-serif' font-weight='700'>L</text></svg>">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "LLM Arbitration · Umer Hashmi", "url": "https://umer-78.github.io/llm-arbitration/", "applicationCategory": "DeveloperApplication", "operatingSystem": "Any (runs in a web browser)", "isAccessibleForFree": true, "author": {"@type": "Person", "name": "Umer Hashmi", "url": "https://umer-78.github.io/"}, "description": "A panel of critic models reviews each answer and a statistical adjudicator turns their verdicts into one probability: measured on 4,551 HELM Lite questions.", "image": "https://umer-78.github.io/llm-arbitration/og.jpg", "sameAs": "https://github.com/umer-78/llm-arbitration"}</script>
 </head>
 <body>
   <div class="wrap">
@@ -34,7 +37,7 @@
       <h1>LLM Arbitration</h1>
       <p class="lede">When several models review an answer, they disagree, and someone has to decide. Here the critics' verdicts go to a naive Bayes adjudicator that has learned, per critic and task, how often each one passes right and wrong answers, and it returns the probability the answer is right. Everything below is out-of-fold on 4,551 HELM Lite questions, with other models' recorded answers as the critics.</p>
       <div class="links"><a class="btn primary" href="#threshold">Draw the line</a><a class="btn" href="https://github.com/umer-78/llm-arbitration">Code and method</a></div>
-      <div class="fx-tags" aria-hidden="true"><div><span>python</span><span>llm</span><span>evaluation</span><span>agents</span><span>calibration</span><span>helm</span><span>python</span><span>llm</span><span>evaluation</span><span>agents</span><span>calibration</span><span>helm</span></div></div>
+      <div class="fx-tags"><div><span>python</span><span>llm</span><span>evaluation</span><span>agents</span><span>calibration</span><span>helm</span></div></div>
     </header>
     <main>
       <section class="kpis" id="kpis"></section>
