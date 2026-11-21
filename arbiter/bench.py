@@ -53,7 +53,7 @@ def run(folds=5, seed=0, detail=False):
     keys = sorted(table)
     fold = np.random.default_rng(seed).permutation(len(keys)) % folds
     names = sorted(next(iter(table.values()))["models"])
-    rows, out = [], []
+    out = []
     for answerer in names:
         panel = panel_for(table, answerer)
         critics = [RecordedCritic(c, {k: table[k]["models"][c]["answer"] for k in keys}) for c in panel]
